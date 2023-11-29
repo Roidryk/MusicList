@@ -6,8 +6,9 @@ public class Principal {
 		// TODO Auto-generated method stub
      Vista vista1 =  new Vista();
      Modelo modelo1 = new Modelo();
-     Controlador controlador1 = new Controlador();
-     System.out.println("Inicio proyecto");
+     Controlador controlador = new Controlador(vista1,modelo1);
+     PantallaCarga carga = new PantallaCarga();
+      vista1.setVisible(true);
      
      
 	}
