@@ -22,17 +22,17 @@ public class PantallaCarga extends JDialog{
 	      contentPane.setLayout(new BorderLayout());
 	      setContentPane(contentPane);
 	 
-	      //Creo una etiqueta con la imagen en el centro
+	     
 	      JLabel lblImagen = new JLabel();
-	      //Indico la imagen que quiero mostrar en la label
+	     
 	      lblImagen.setIcon(new ImageIcon(SplashScreen.class.getResource("/gui/splash.jpg")));
 	      contentPane.add(lblImagen, BorderLayout.CENTER);
 	 
-	      //Creo un panel al sur con una barra de carga y una label para el autor
+	      
 	      JPanel panelInferior = new JPanel();
 	      panelInferior.setLayout(new GridLayout(2, 1, 0, 0));
 	      barraProgreso = new JProgressBar();
-	      //Muestra el % de carga
+	    
 	      barraProgreso.setStringPainted(true);
 	      panelInferior.add(barraProgreso);
 	 
@@ -41,12 +41,11 @@ public class PantallaCarga extends JDialog{
 	      lblFersoft.setHorizontalAlignment(SwingConstants.CENTER);
 	      panelInferior.add(lblFersoft);
 	 
-	      //Anado el panel inferior al principal
 	      contentPane.add(panelInferior, BorderLayout.SOUTH);
 	 
-	      setResizable(false); //Impedir redimensionar la ventana
-	      setUndecorated(true); //Eliminar la barra de título y sus botones
-	      setLocationRelativeTo(null); //Mostrar en el centro
+	      setResizable(false); 
+	      setUndecorated(true); 
+	      setLocationRelativeTo(null); 
 	      setVisible(true);
 	 
 	      try {
@@ -54,7 +53,7 @@ public class PantallaCarga extends JDialog{
 	      } catch (InterruptedException e) {
 	         throw new RuntimeException(e);
 	      }
-	      //Al terminar la carga cierro la ventana
+	     
 	      dispose();
 	   }
 	 

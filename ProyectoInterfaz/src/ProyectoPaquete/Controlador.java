@@ -1,18 +1,34 @@
 package ProyectoPaquete;
-	import ProyectoPaquete.Modelo;
-	import ProyectoPaquete.Vista;
-public class Controlador {	
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
 
 
 
-public Controlador(Vista vista1, Modelo modelo1) {
-		// TODO Auto-generated constructor stub
-	}
+public class Controlador {
 
+	 private Modelo modelo;
+	    private Vista vista;
 
-public void iniciarVista() throws Throwable{
-	 
-	
-	
-}
+	    public Controlador(Modelo modelo, Vista vista) {
+	        this.modelo = modelo;
+	        this.vista = vista;
+
+	        this.vista.agregarListener(new BotonClickListener());
+	    }
+
+	    class BotonClickListener implements ActionListener {
+	        @Override
+	        
+	        	 public void actionPerformed(ActionEvent e) {
+	        	        if (e.getSource() instanceof JButton) {
+	        	            JButton boton = (JButton) e.getSource();
+	        	            String genero = boton.getText(); 
+	        	            String[] canciones = modelo.obtenerCanciones(genero);
+	        	            vista.mostrarCanciones(canciones);
+	        	        }
+	        }
+	    }
 }
