@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import java.awt.Font;
 
 public class Vista extends JFrame {
 	 private static final long serialVersionUID = 1L;
@@ -33,6 +34,7 @@ public class Vista extends JFrame {
 
 	       
 	        JLabel lblTitulo = new JLabel("MusicList", SwingConstants.CENTER);
+	        lblTitulo.setFont(new Font("Times New Roman", Font.BOLD, 28));
 	        contentPane.add(lblTitulo);
 
 	        
