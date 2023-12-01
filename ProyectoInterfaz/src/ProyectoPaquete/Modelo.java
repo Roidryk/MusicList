@@ -15,9 +15,9 @@ public class Modelo {
 		case "Rock":
 			return cancionesRock;
 		case "Jazz":
-			return cancionesRock;
+			return cancionesJazz;
 		case "HipHop":
-			return cancionesRock;
+			return cancionesHipHop;
 
 		default:
 			return new String[] {};

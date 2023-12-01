@@ -20,7 +20,7 @@ public class Controlador {
 	    }
 
 	    class BotonClickListener implements ActionListener {
-	        @Override
+	      
 	        
 	        	 public void actionPerformed(ActionEvent e) {
 	        	        if (e.getSource() instanceof JButton) {

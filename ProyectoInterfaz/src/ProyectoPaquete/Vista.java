@@ -20,8 +20,8 @@ public class Vista extends JFrame {
 	    private JPanel contentPane;
 	    private JButton btnPop = new JButton("Pop");
 	    private JButton btnRock = new JButton("Rock");
-	    private JButton btnOtros1 = new JButton("Jazz");
-	    private JButton btnOtros2 = new JButton("HipHop");
+	    private JButton btnJazz = new JButton("Jazz");
+	    private JButton btnHipHop = new JButton("HipHop");
 
 	    public Vista() {
 	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -31,27 +31,26 @@ public class Vista extends JFrame {
 	        setContentPane(contentPane);
 	        contentPane.setLayout(new GridLayout(4, 1));
 
-	        // Título
+	       
 	        JLabel lblTitulo = new JLabel("MusicList", SwingConstants.CENTER);
 	        contentPane.add(lblTitulo);
 
-	        // Panel de botones
+	        
 	        JPanel panelBotones = new JPanel();
 	        contentPane.add(panelBotones);
 	        panelBotones.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 
-	        // Botones
 	        panelBotones.add(btnPop);
 	        panelBotones.add(btnRock);
-	        panelBotones.add(btnOtros1);
-	        panelBotones.add(btnOtros2);
+	        panelBotones.add(btnJazz);
+	        panelBotones.add(btnHipHop);
 	    }
 
 	    public void agregarListener(ActionListener listener) {
 	        btnPop.addActionListener(listener);
 	        btnRock.addActionListener(listener);
-	        btnOtros1.addActionListener(listener);
-	        btnOtros2.addActionListener(listener);
+	        btnJazz.addActionListener(listener);
+	        btnHipHop.addActionListener(listener);
 	    }
 
 	    public String obtenerGenero(ActionEvent e) {
@@ -75,7 +74,7 @@ public class Vista extends JFrame {
 	        }
 
 	        JScrollPane scrollPane = new JScrollPane(panelCanciones);
-	        frameCanciones.add(scrollPane);
+	        frameCanciones.getContentPane().add(scrollPane);
 
 	        frameCanciones.setVisible(true);
 	    }
