@@ -15,70 +15,75 @@ import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import java.awt.Font;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
 
 public class Vista extends JFrame {
-	 private static final long serialVersionUID = 1L;
-	    private JPanel contentPane;
-	    private JButton btnPop = new JButton("Pop");
-	    private JButton btnRock = new JButton("Rock");
-	    private JButton btnJazz = new JButton("Jazz");
-	    private JButton btnHipHop = new JButton("HipHop");
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JButton btnPop = new JButton("Pop");
+	private JButton btnRock = new JButton("Rock");
+	private JButton btnJazz = new JButton("Jazz");
+	private JButton btnHipHop = new JButton("HipHop");
+	private final JPanel panel = new JPanel();
 
-	    public Vista() {
-	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	        setBounds(100, 100, 450, 300);
-	        contentPane = new JPanel();
-	        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-	        setContentPane(contentPane);
-	        contentPane.setLayout(new GridLayout(4, 1));
+	public Vista() {
+		setTitle("MusicList");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(new GridLayout(4, 1));
 
-	       
-	        JLabel lblTitulo = new JLabel("MusicList", SwingConstants.CENTER);
-	        lblTitulo.setFont(new Font("Times New Roman", Font.BOLD, 28));
-	        contentPane.add(lblTitulo);
+		JLabel lblTitulo = new JLabel("MusicList", SwingConstants.CENTER);
+		lblTitulo.setFont(new Font("Times New Roman", Font.BOLD, 28));
+		contentPane.add(lblTitulo);
 
-	        
-	        JPanel panelBotones = new JPanel();
-	        contentPane.add(panelBotones);
-	        panelBotones.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		JPanel panelBotones = new JPanel();
+		contentPane.add(panelBotones);
+		panelBotones.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 
-	        panelBotones.add(btnPop);
-	        panelBotones.add(btnRock);
-	        panelBotones.add(btnJazz);
-	        panelBotones.add(btnHipHop);
-	    }
+		panelBotones.add(btnPop);
+		panelBotones.add(btnRock);
+		panelBotones.add(btnJazz);
+		panelBotones.add(btnHipHop);
 
-	    public void agregarListener(ActionListener listener) {
-	        btnPop.addActionListener(listener);
-	        btnRock.addActionListener(listener);
-	        btnJazz.addActionListener(listener);
-	        btnHipHop.addActionListener(listener);
-	    }
+		contentPane.add(panel);
+		panel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+	}
 
-	    public String obtenerGenero(ActionEvent e) {
-	        if (e.getSource() instanceof JButton) {
-	            return ((JButton) e.getSource()).getText();
-	        }
-	        return "";
-	    }
+	public void agregarListener(ActionListener listener) {
+		btnPop.addActionListener(listener);
+		btnRock.addActionListener(listener);
+		btnJazz.addActionListener(listener);
+		btnHipHop.addActionListener(listener);
+	}
 
-	    public void mostrarCanciones(String[] canciones) {
-	        JFrame frameCanciones = new JFrame("Lista de Canciones");
-	        frameCanciones.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-	        frameCanciones.setSize(300, 200);
+	public String obtenerGenero(ActionEvent e) {
+		if (e.getSource() instanceof JButton) {
+			return ((JButton) e.getSource()).getText();
+		}
+		return "";
+	}
 
-	        JPanel panelCanciones = new JPanel();
-	        panelCanciones.setLayout(new BoxLayout(panelCanciones, BoxLayout.Y_AXIS));
+	public void mostrarCanciones(String[] canciones) {
+		JFrame frameCanciones = new JFrame("Lista de Canciones");
+		frameCanciones.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frameCanciones.setSize(300, 200);
 
-	        for (String cancion : canciones) {
-	            JLabel labelCancion = new JLabel(cancion);
-	            panelCanciones.add(labelCancion);
-	        }
+		JPanel panelCanciones = new JPanel();
+		panelCanciones.setLayout(new BoxLayout(panelCanciones, BoxLayout.Y_AXIS));
 
-	        JScrollPane scrollPane = new JScrollPane(panelCanciones);
-	        frameCanciones.getContentPane().add(scrollPane);
+		for (String cancion : canciones) {
+			JLabel labelCancion = new JLabel(cancion);
+			panelCanciones.add(labelCancion);
+		}
 
-	        frameCanciones.setVisible(true);
-	    }
+		JScrollPane scrollPane = new JScrollPane(panelCanciones);
+		frameCanciones.getContentPane().add(scrollPane);
+
+		frameCanciones.setVisible(true);
+	}
 
 }
