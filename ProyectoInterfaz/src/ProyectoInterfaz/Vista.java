@@ -1,4 +1,4 @@
-package MusicList;
+package ProyectoInterfaz;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

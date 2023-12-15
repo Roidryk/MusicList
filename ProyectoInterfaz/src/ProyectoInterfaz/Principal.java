@@ -1,4 +1,4 @@
-package MusicList;
+package ProyectoInterfaz;
 
 public class Principal {
 

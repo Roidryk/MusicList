@@ -1,4 +1,4 @@
-package MusicList;
+package ProyectoInterfaz;
 
 import java.util.ArrayList;
 
