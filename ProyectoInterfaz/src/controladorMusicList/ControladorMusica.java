@@ -35,14 +35,14 @@ public class ControladorMusica {
 	        	            String[] canciones = modelo.obtenerCanciones(genero);
 	        	            JFrame frameCanciones = new JFrame("Lista de canciones");
 	        	            vista.mostrarCanciones(canciones, frameCanciones);
-	        	            int decision = JOptionPane.showConfirmDialog(null, "¿Desea cerrar la ventana de canciones?");
-	                        if (decision == JOptionPane.YES_OPTION) { 
+	        	            //int decision = JOptionPane.showConfirmDialog(null, "¿Desea cerrar la ventana de canciones?");
+	                        //if (decision == JOptionPane.YES_OPTION) { 
 	                         
 	                            
-	                        } else {
+	                        //} else {
 	                            
 	                            //vista.setOperacionCierreVentanaCanciones(frameCanciones, JFrame.DO_NOTHING_ON_CLOSE);
-	                        }
+	                        //}
 	        	        }
 	        	 }
 	        	 
