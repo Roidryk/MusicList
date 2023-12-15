@@ -9,7 +9,7 @@ public class Principal {
      Controlador controlador = new Controlador(modelo1,vista1);
      
       vista1.setVisible(true);
-     
+     System.out.println("Hola");
      
 	}
 
