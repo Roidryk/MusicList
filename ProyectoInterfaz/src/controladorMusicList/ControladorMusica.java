@@ -1,4 +1,4 @@
-package MusicList;
+package controladorMusicList;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,14 +7,17 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+import ModeloMusicList.ModeloMusica;
+import VistaMusicList.VistaMusica;
 
 
-public class Controlador {
 
-	 private Modelo modelo;
-	    private Vista vista;
+public class ControladorMusica {
 
-	    public Controlador(Modelo modelo, Vista vista) {
+	 private ModeloMusica modelo;
+	    private VistaMusica vista;
+
+	    public ControladorMusica(ModeloMusica modelo, VistaMusica vista) {
 	        this.modelo = modelo;
 	        this.vista = vista;
 

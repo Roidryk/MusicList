@@ -1,8 +1,8 @@
-package MusicList;
+package ModeloMusicList;
 
 import java.util.ArrayList;
 
-public class Modelo {
+public class ModeloMusica {
 	private String[] cancionesPop = { "Canción 1", "Canción 2", "Canción 3" };
 	private String[] cancionesRock = { "Canción 4", "Canción 5", "Canción 6" };
 	private String[] cancionesJazz = { "Canción 7", "Canción 8", "Canción 9" };

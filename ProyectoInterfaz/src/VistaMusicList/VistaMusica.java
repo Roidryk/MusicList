@@ -1,4 +1,4 @@
-package MusicList;
+package VistaMusicList;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -6,7 +6,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Vista extends JFrame {
+public class VistaMusica extends JFrame {
 	private static final long serialVersionUID = 1L;
     private JPanel contentPane;
     private JButton btnPop = new JButton("Pop");
@@ -14,7 +14,7 @@ public class Vista extends JFrame {
     private JButton btnOtros1 = new JButton("Jazz");
     private JButton btnOtros2 = new JButton("HipHop");
 
-    public Vista() {
+    public VistaMusica() {
         
         setBounds(100, 100, 450, 300);
         contentPane = new JPanel();
